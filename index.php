@@ -94,4 +94,63 @@ function boasVindas($nome) {
 echo boasVindas("Maria");
 echo boasVindas("João");
 echo boasVindas("Visitante");
+
+// Total de Compras
+echo "<h1>Total de Compras</h1>";
+$precos = [29.50, 15.50, 42.00, 8.00, 23.00];
+$total = 0;
+foreach ($precos as $preco) {
+    $total += $preco;
+}
+
+echo "Total da compra: R$ " . number_format($total, 2, ',', '.');
+echo "<hr>";
+
+// Cadastro do Usuário
+echo "<h1>Cadastro do Usuário</h1>";
+$usuario = [
+    "nome" => "João Silva",
+    "idade" => 28,
+    "email" => "joao.silva@email.com"
+];
+
+echo "Nome: " . $usuario["nome"] . "<br>";
+echo "Idade: " . $usuario["idade"] . "<br>";
+echo "E-mail: " . $usuario["email"] . "<br>";
+echo "<hr>";
+
+// Lista de Produtos
+echo "<h1>Lista de Produtos</h1>";
+$produtos = [
+    "Notebook" => 3500.00,
+    "Mouse" => 80.50,
+    "Teclado" => 150.99
+];
+
+foreach ($produtos as $nome => $preco) {
+    echo "Produto: $nome, Preço: R$ " . number_format($preco, 2, ',', '.') . "<br>";
+
+}
+    echo "<hr>";
+
+    // Cadastro de Alunos
+    echo "<h1>Cadastro de Alunos</h1>";
+    $alunos = [
+        "Ana" => 8.5,
+        "Bruno" => 7.0,
+        "Carla" => 8.5
+    ];
+
+    $somaNotas = 0;
+    $quantidadeAlunos = count($alunos);
+
+    foreach ($alunos as $nome => $nota) {
+        echo "Aluno: $nome, Nota: $nota<br>";
+        $somaNotas += $nota;
+    }
+
+    $media = $somaNotas / 3;
+    echo "Média da turma: " . number_format($media, 2, ',', '.');
+?>
+
 ?>
